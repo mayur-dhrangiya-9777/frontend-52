@@ -1,0 +1,71 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
+}
+
+.navbar{
+    background:black !important;
+}
+
+.navbar-brand{
+    color:gold !important;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.nav-link{
+    color:white !important;
+    margin-left:20px;
+}
+
+.nav-link:hover{
+    color:gold !important;
+}
+
+.container{
+    max-width:1200px;
+}
+
+h1,h2,h3,h4,h5{
+    text-align:center;
+}
+
+p{
+    text-align:center;
+}
+
+.card{
+    border:none;
+    border-radius:15px;
+    transition:0.5s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px gray;
+}
+
+img{
+    width:100%;
+    border-radius:15px;
+}
+
+.btn{
+    border-radius:30px;
+}
+
+footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+.hero button{
+    margin-top:20px;
+}
+
+.btn{
+    margin:5px;
+}
