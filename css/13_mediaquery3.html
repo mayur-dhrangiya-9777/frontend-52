@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+    *{
+        margin:0px;
+        padding:0px;
+        letter-spacing:1px;
+        box-sizing: border-box;
+    }
+    #site{
+        display:grid;
+        height:100vh;
+    }
+    #site>div{
+        border: 1px solid black;
+    }
+    #mobile_menu{display:none;}
+
+    @media(min-width:320px)and(max-width:767px)
+    {
+        #site{
+            grid-template-columns: 100%;
+            grid-template-rows: 60PX 50PX auto auto 50px;
+            grid-template-areas:
+            "site_header"
+            "site_nav"
+            "main"
+            "sidebar"
+            "site_footer"
+         overflow-y=auto;
+        }
+    }
+
+    </style>
+  </head>
+  <body>
+    <div id="site">
+      <div id="site_header">
+        <span>
+          <img src="image/LOGO2.png" height="100px" alt="" />
+          <h2>the easylearn acedemy</h2>
+        </span>
+        <ul id="desktop-menu">
+            <li><a href="1basic.html">home</a></li>
+            <li><a href="2_basic.html">about us</a></li>
+            <li><a href="3_basic.html">products</a></li>
+            <li><a href="4_selector.html">services</a></li>
+            <li><a href="5_basics.html">contact us</a></li>
+        </ul>
+        <img src="image/LOGO.png" height="50px" alt="">
+      </div>
+      <div id="site_nav">navigation</div>
+      <div id="main">main</div>
+      <div id="sidebar">sidebar</div>
+      <div id="site_footer">footer</div>
+    </div>
+    <div id="mobile_menu_div">
+        <ul>
+           <li><a href="1basic.html">home</a></li>
+            <li><a href="2_basic.html">about us</a></li>
+            <li><a href="3_basic.html">products</a></li>
+            <li><a href="4_selector.html">services</a></li>
+            <li><a href="5_basics.html">contact us</a></li 
+        </ul>
+    </div>
+    <script>
+        var ismenuvisible=false;
+        function menu_button_click(){
+            if(ismenuvisible===true)
+        {
+            ismenuvisible=false;
+            document.getElementById('mobile_menu_div').style="display:block";
+        }
+        else
+        {
+             ismenuvisible=true;
+            document.getElementById('mobile_menu_div').style="display:none";
+        }
+        }
+    </script>
+
+  </body>
+</html>

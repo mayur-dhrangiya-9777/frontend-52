@@ -1,0 +1,13 @@
+*{
+    margin:0px;
+    padding:0px;
+    letter-spacing: 1px;
+    box-sizing:border-box;
+}
+body{
+   background-image: url('image/images.jpg');
+   background-repeat: no-repeat;
+   background-position:center center;
+   background-attachment: fixed;
+   height: 100vh;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        article>div {
+            height: 200px;
+            width: 200px;
+            background-color: aliceblue;
+            border: 1px solid black;
+            object-fit: cover;
+
+        }
+
+        /* how to display image in it's parent without overflow */
+        article>div>img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <div>
+            <img src="image/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.webp" alt="" />
+        </div>
+        <div>
+            <img src="image/images.jpg" alt="" />
+        </div>
+        <div>
+            <img src="image/LOGO.png" alt="" />
+        </div>
+        <div>
+            <img src="image/LOGO2.png" alt="" />
+        </div>
+    </article>
+</body>
+
+</html>
