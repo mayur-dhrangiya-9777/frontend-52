@@ -1,0 +1,158 @@
+1. Basic Tags
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+<body>
+
+
+  2. Heading Tags  
+  <h1>
+<h2>
+<h3>
+<h4>
+<h5>
+<h6>
+
+   
+3. Text Formatting Tags
+<p>
+<br>
+<hr>
+<b>
+<strong>
+<i>
+<em>
+<u>
+<mark>
+<small>
+<del>
+<ins>
+<sub>
+<sup>
+<pre>
+<code>
+<blockquote>
+<q>
+<abbr>
+<cite>
+<address>
+<bdi>
+<bdo>
+
+
+4. Link & Navigation Tags
+<a>
+<nav>
+
+5. Image & Multimedia Tags
+<img>
+<audio>
+<video>
+<source>
+<track>
+<picture>
+<figure>
+<figcaption>
+<iframe>
+<embed>
+<object>
+<param>
+
+
+
+6. List Tags
+<ul>
+<ol>
+<li>
+<dl>
+<dt>
+<dd>
+
+
+7. Table Tags
+<table>
+<caption>
+<thead>
+<tbody>
+<tfoot>
+<tr>
+<th>
+<td>
+<colgroup>
+<col>
+
+
+
+8. Form Tags
+<form>
+<input>
+<label>
+<textarea>
+<button>
+<select>
+<option>
+<optgroup>
+<fieldset>
+<legend>
+<datalist>
+<output>
+<meter>
+<progress>
+
+
+9. Semantic HTML5 Tags
+<header>
+<footer>
+<main>
+<section>
+<article>
+<aside>
+<details>
+<summary>
+<dialog>
+<time>
+
+
+10. Container Tags
+<div>
+<span>
+
+
+11. Meta Tags
+<meta>
+<link>
+<style>
+<script>
+<base>
+
+
+12. Canvas & Graphics
+<canvas>
+<svg>
+
+
+13. Interactive Tags
+<details>
+<summary>
+<dialog>
+
+
+14. Template Tags
+<template>
+<slot>
+
+
+15. Ruby Annotation Tags
+<ruby>
+<rt>
+<rp>
+
+
+16. Other Useful Tags
+<data>
+<kbd>
+<samp>
+<var>
+<wbr>
+<noscript>
