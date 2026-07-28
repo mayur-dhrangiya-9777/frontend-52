@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bike Ride Game</title>
+  <style>
+    body { margin: 0; overflow: hidden; background: #87CEEB; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+
+<canvas id="game"></canvas>
+
+<script>
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// Bike object
+let bike = {
+  x: 100,
+  y: canvas.height - 120,
+  width: 80,
+  height: 40,
+  speed: 0,
+  maxSpeed: 10,
+  acceleration: 0.2,
+  friction: 0.05,
+  gravity: 0.5,
+  dy: 0,
+  onGround: true
+};
+
+// Road lines
+let lines = [];
+
+// Controls
+let keys = {};
+document.addEventListener("keydown", e => keys[e.key] = true);
+document.addEventListener("keyup", e => keys[e.key] = false);
+
+// Draw bike
+function drawBike() {
+  ctx.fillStyle = "red";
+  ctx.fillRect(bike.x, bike.y, bike.width, bike.height);
+
+  // Wheels
+  ctx.fillStyle = "black";
+  ctx.beginPath();
+  ctx.arc(bike.x + 15, bike.y + 40, 12, 0, Math.PI * 2);
+  ctx.arc(bike.x + 65, bike.y + 40, 12, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+// Draw road
+function drawRoad() {
+  ctx.fillStyle = "#333";
+  ctx.fillRect(0, canvas.height - 80, canvas.width, 80);
+
+  ctx.fillStyle = "white";
+  lines.forEach(line => {
+    ctx.fillRect(line.x, canvas.height - 45, 40, 5);
+  });
+}
+
+// Update road lines
+function updateLines() {
+  if (lines.length < 20) {
+    lines.push({ x: canvas.width });
+  }
+
+  lines.forEach((line, i) => {
+    line.x -= bike.speed * 5;
+
+    if (line.x < -40) {
+      lines.splice(i, 1);
+    }
+  });
+}
+
+// Physics
+function updateBike() {
+  // Acceleration
+  if (keys["ArrowRight"]) bike.speed += bike.acceleration;
+  if (keys["ArrowLeft"]) bike.speed -= bike.acceleration;
+
+  // Clamp speed
+  bike.speed = Math.max(0, Math.min(bike.maxSpeed, bike.speed));
+
+  // Friction
+  if (!keys["ArrowRight"] && !keys["ArrowLeft"]) {
+    bike.speed -= bike.friction;
+  }
+
+  // Jump
+  if (keys[" "] && bike.onGround) {
+    bike.dy = -10;
+    bike.onGround = false;
+  }
+
+  // Gravity
+  bike.dy += bike.gravity;
+  bike.y += bike.dy;
+
+  // Ground collision
+  if (bike.y >= canvas.height - 120) {
+    bike.y = canvas.height - 120;
+    bike.dy = 0;
+    bike.onGround = true;
+  }
+}
+
+// Game loop
+function gameLoop() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  updateBike();
+  updateLines();
+
+  drawRoad();
+  drawBike();
+
+  // Speed display
+  ctx.fillStyle = "black";
+  ctx.font = "20px Arial";
+  ctx.fillText("Speed: " + bike.speed.toFixed(1), 20, 30);
+
+  requestAnimationFrame(gameLoop);
+}
+
+gameLoop();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>javascript exesize</h1>
+    <h2>use a console</h2>
+    <script>
+        //Dec  typeof to log each type. Show that const prevents reassignment but allows mutation of objects/arrays.lare variables using var, let, and const. Store a string, number, boolean, null, undefined, and an object. Use
+        // Declare variables using var, let, and const
+        var myString = "Hello, world";
+        let myNumber = 42;
+        const myBoolean = true;
+
+        // Other types
+        let myNull = null;
+        let myUndefined = undefined;
+        const myObject = {
+            name: "Alice",
+            age: 25
+        };
+
+        // Log each type using typeof
+        console.log(typeof myString);     // string
+        console.log(typeof myNumber);     // number
+        console.log(typeof myBoolean);    // boolean
+        console.log(typeof myNull);       // object (this is a known JS quirk)
+        console.log(typeof myUndefined);  // undefined
+        console.log(typeof myObject);     // object
+
+        // Demonstrate const behavior
+
+       
+
+       
+        myObject.age = 26;
+        myObject.city = "New York";
+
+        console.log(myObject);
+
+        // Arrays with const
+        const myArray = [1, 2, 3];
+
+        myArray.push(4);
+
+        console.log(myArray);
+
+    </script>
+</body>
+
+</html>

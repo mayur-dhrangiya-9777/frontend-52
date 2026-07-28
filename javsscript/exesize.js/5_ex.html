@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>exesiz 5</h1>
+    <h1>use a console</h1>
+    <script>
+        // Write a function that prints numbers 1 to n using each loop type. Also use for...in on an object to iterate over its keys.
+        function printNumbers(n) {
+    console.log("Using for loop:");
+    for (let i = 1; i <= n; i++) {
+        console.log(i);
+    }
+
+    console.log("Using while loop:");
+    let j = 1;
+    while (j <= n) {
+        console.log(j);
+        j++;
+    }
+
+    console.log("Using do...while loop:");
+    let k = 1;
+    do {
+        console.log(k);
+        k++;
+    } while (k <= n);
+}
+
+// Example usage
+printNumbers(5);
+
+// Using for...in with an object
+const person = {
+    name: "Alice",
+    age: 25,
+    city: "New York"
+};
+
+console.log("Using for...in on object:");
+for (let key in person) {
+    console.log(key + ": " + person[key]);
+}
+    </script>
+</body>
+
+</html>

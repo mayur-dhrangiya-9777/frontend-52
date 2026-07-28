@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>excsize 2</h1>
+    <h2>use console</h2>
+    <script>
+        // Create a function compareValues(a, b) that returns an object showing results of ==, ===, !=, !== for all comparison cases including strings, numbers, booleans, null/undefined, and NaN
+        function compareValues(a, b) {
+  return {
+    doubleEquals: a == b,
+    tripleEquals: a === b,
+    notDoubleEquals: a != b,
+    notTripleEquals: a !== b,
+    values: {
+      a: a,
+      b: b
+    },
+    types: {
+      a: typeof a,
+      b: typeof b
+    }
+  };
+}
+    </script>
+</body>
+
+</html>

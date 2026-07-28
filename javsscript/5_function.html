@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>confirm dialog box</h1>
+    <p align="right" >
+        <a onclick="return confirmsubscription();" href="sucess.html">click to activate monthly subscription </a>
+    </p>
+<script>
+
+  function confirmsubscription()
+ {
+    var response=confirm("are you sure you want prches subscription");
+    if(response==true)
+ {
+    alert("thank you ,welcom our team");
+    return true ;
+ }
+  else{
+    alert("nevr mind we love to make of our team");
+    return false;
+  }
+ }  
+
+</script>
+
+</body>
+</html>

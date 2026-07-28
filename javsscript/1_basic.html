@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+  <form action="sucess.html" method="post">
+   
+     <table align="center" cellspadding="10"width="60" cellspacing="5"> 
+       <tr>
+      <td colspan="2" align="center">
+     <h3>search bus</h3>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="source">form</label>
+      </td>
+      <td>
+        <input type="text" name="source" id="source" required />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="destination">to</label>
+      </td>
+      <td>
+        <input type="text" name="destination" id="destination" required/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="journey_date">
+          select journey_date
+        </label>
+      </td>
+      <td>
+        <input type="date" name="journey_date" id="journey_date"required/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="seats">seats</label>
+      </td>
+      <td>
+        <select name="seats" id="seats"required>
+          <option value="">select </option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="bustype">select type</label>
+      </td>
+      <td>
+        <label for="nonac">
+          <input id="nonac" type="radio" name="bustype" value="1"/>nonac
+        </label>
+        <label for="ac">
+          <input type="radio" id="ac" name="bustype" value="2"/>ac
+        </label>
+        <label for="sleeper">
+          <input type="radio" id="sleeper" name="bustype" value="3"/>sleeper
+        </label>
+        <label for="ac_sleeper">
+          <input type="radio" id="ac_sleeper" name="bustype" value="4"/>ac_sleeper
+        </label>
+   </table>
+  </head>
+<body>
+  
+
+     

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Write a script that uses prompt() to get name & age, confirm() to ask 'Are you sure?', then alert() with a message using template literals. Handle empty input gracefully.
+
+        function getUserInfo() {
+            // Ask for name
+            let name = prompt("Enter your name:");
+            if (name === null || name.trim() === "") {
+                alert("Name cannot be empty. Please refresh and try again.");
+                return;
+            }
+
+            // Ask for age
+            let age = prompt("Enter your age:");
+            if (age === null || age.trim() === "") {
+                alert("Age cannot be empty. Please refresh and try again.");
+                return;
+            }
+
+            // Optional: validate age is a number
+            if (isNaN(age)) {
+                alert("Please enter a valid number for age.");
+                return;
+            }
+
+            // Confirm details
+            let isSure = confirm(`Are you sure?\nName: ${name}\nAge: ${age}`);
+
+            if (!isSure) {
+                alert("Operation cancelled. Please try again.");
+                return;
+            }
+
+            // Final message
+            alert(`Hello ${name}! You are ${age} years old.`);
+        }
+
+        // Run the function
+        getUserInfo();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>expele 4</h1>
+<h2>use a console</h2>
+<body>
+    <script>
+        //Implement a function getAccessMessage(age) using ternary operator + nullish coalescing (??) that returns different messages based on age.
+
+        function getAccessMessage(age) {
+            const validAge = age ?? -1; // fallback if null or undefined
+
+            return validAge < 0
+                ? "Invalid age provided"
+                : validAge < 13
+                    ? "Access denied: You are too young"
+                    : validAge < 18
+                        ? "Limited access: Parental guidance suggested"
+                        : "Full access granted";
+        }
+        console.log(getAccessMessage(10));        // Access denied
+        console.log(getAccessMessage(16));        // Limited access
+        console.log(getAccessMessage(21));        // Full access
+        console.log(getAccessMessage(null));      // Invalid age
+        console.log(getAccessMessage(undefined)); // Invalid age
+
+    </script>
+</body>
+
+</html>
